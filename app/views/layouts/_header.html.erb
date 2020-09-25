@@ -5,15 +5,15 @@
 
   <div class="header__right">
     <% if learner_signed_in? %>
-  	  <%= link_to 'My Page', learner_path(current_learner) %>
-  	  <%= link_to 'Moments', posts_path %>
-  	  <%= link_to 'Learners', learners_path %>
-  	  <%= link_to 'Sign Out', destroy_learner_session_path, method: :delete %>
+  	  <%= link_to 'My Page', learner_path(current_learner), class: "header__link" %>
+  	  <%= link_to 'Moments', posts_path, class: "header__link" %>
+  	  <%= link_to 'Learners', learners_path, class: "header__link" %>
+  	  <%= link_to 'Sign Out', destroy_learner_session_path, method: :delete, class: "header__link" %>
   	<% else %>
-      <%= link_to 'About', homes_about_path %>
-      <%= link_to 'Moments', posts_path %>
-      <%= link_to 'Sign Up', new_learner_registration_path %>
-      <%= link_to 'Sign_in', new_learner_session_path %>
+      <%= link_to 'About', homes_about_path, class: "header__link" %>
+      <%= link_to 'Moments', posts_path, class: "header__link" %>
+      <%= link_to 'Sign Up', new_learner_registration_path, class: "header__link" %>
+      <%= link_to 'Sign_in', new_learner_session_path, class: "header__link" %>
     <% end %>
   </div>
 </div>

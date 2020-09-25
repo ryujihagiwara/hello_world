@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :learners
 
-  resources :leraners, only: [:index, :show, :edit, :update]
+  root 'homes#top'
+  get '/homes/about' => 'homes#about'
+
+  resources :learners, only: [:index, :show, :edit, :update]
 
   resources :posts do
   resources :comments, only: [:create, :edit, :update, :destroy]

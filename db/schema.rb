@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_09_24_062700) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "nickname", default: "", null: false
-    t.integer "country", null: false
+    t.string "country", default: "", null: false
     t.integer "learning", null: false
     t.integer "native", null: false
     t.datetime "created_at", null: false

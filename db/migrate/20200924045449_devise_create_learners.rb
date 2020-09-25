@@ -33,7 +33,7 @@ class DeviseCreateLearners < ActiveRecord::Migration[5.2]
       # t.datetime :locked_at
 
       t.string :nickname,       null: false, default: ""
-      t.integer :country,       null: false, default: ""
+      t.string :country,       null: false, default: ""
       t.integer :learning,      null: false, default: ""
       t.integer :native,        null: false, default: ""
       t.timestamps null: false, null: false, default: ""

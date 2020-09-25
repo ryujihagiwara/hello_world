@@ -65,7 +65,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 # 新規登録時、出身地登録用gem
-gem 'country_select'
+gem 'country_select', require: 'country_select_without_sort_alphabetical'
 
 # 画像投稿用gem
 gem 'refile', require: 'refile/rails', github: 'manfe/refile'

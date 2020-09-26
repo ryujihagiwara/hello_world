@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_24_062700) do
+ActiveRecord::Schema.define(version: 2020_09_25_102807) do
 
   create_table "comments", force: :cascade do |t|
     t.text "comment"
+    t.integer "learner_id"
+    t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
     t.integer "learner_id"
     t.integer "post_id"
     t.datetime "created_at", null: false
@@ -29,7 +36,7 @@ ActiveRecord::Schema.define(version: 2020_09_24_062700) do
     t.string "nickname", default: "", null: false
     t.string "country", default: "", null: false
     t.integer "learning", null: false
-    t.integer "native", null: false
+    t.string "native", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "profile_image_id"

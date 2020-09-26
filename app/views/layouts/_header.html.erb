@@ -6,6 +6,7 @@
   <div class="header__right">
     <% if learner_signed_in? %>
   	  <%= link_to 'My Page', learner_path(current_learner), class: "header__link" %>
+  	  <%= link_to 'Post New', new_post_path, class: "header__link" %>
   	  <%= link_to 'Moments', posts_path, class: "header__link" %>
   	  <%= link_to 'Learners', learners_path, class: "header__link" %>
   	  <%= link_to 'Sign Out', destroy_learner_session_path, method: :delete, class: "header__link" %>

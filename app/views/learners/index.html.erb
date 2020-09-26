@@ -1,0 +1,29 @@
+<div class="index">
+
+  <table class="index__table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>nickname</th>
+        <th>country</th>
+        <th>learning</th>
+        <th>native</th>
+        <th>follower</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @learners.each do |learner| %>
+      <tr>
+        <td><%= attachment_image_tag learner, :profile_image, :fill, 60, 60, fallback: "no_image.jpg", class: "img-circle pull-left profile-thumb" %></td>
+        <td><%= learner.nickname %></td>
+        <td><%= learner.country %></td>
+        <td><%= learner.learning %></td>
+        <td><%= learner.native %></td>
+        <!-- <td></td> -->
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

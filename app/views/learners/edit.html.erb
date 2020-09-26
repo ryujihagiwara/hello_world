@@ -1,0 +1,39 @@
+<h2>edit</h2>
+
+<%= form_for(@learner) do |f| %>
+
+  <div class="field">
+    <%= f.label :nickname %>
+    <%= f.text_field :nickname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile_image %>
+    <%= f.attachment_field :profile_image %>
+
+
+  <div class="field">
+    <%= f.label :introduction %>
+    <%= f.text_area :introduction %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.country_select :country, { include_blank: 'please select'} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :learning %>
+    <%= f.select :learning, Learner.learnings.keys.to_a %>
+  </div>
+
+  <div class="field">
+    <%= f.label :native %>
+    <%= f.select :native, { 'Japanese': 'Japanese' , 'English': 'English' , 'Spanish': 'Spanish' , 'German': 'German' , 'French': 'French' , 'Italian': 'Italian' } %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>

@@ -1,0 +1,42 @@
+<div class="PostNew">
+
+  <%= form_for(@post) do |f| %>
+    <!-- エラーメッセージ -->
+    <% if @post.errors.any? %>
+      <div class="error_explanation">
+        <h3><%= @post.errors.count %>error prohibited this obj from being saved:</h3>
+		  <ul>
+		    <% @post.errors.full_messages.each do |message| %>
+			  <li><%= message %></li>
+			<% end %>
+		  </ul>
+	  </div>
+	<% end %>
+
+
+      <!-- 画像登録フォーム -->
+      <div class="PostNew__image">
+        <%= f.attachment_field :image %>
+      </div>
+
+
+
+      <!-- タイトル入力フォーム -->
+      <div class="PostNew__title">
+        <%= f.text_field :title, placeholder: "title" %>
+      </div>
+
+      <!-- 本文入力フォーム -->
+      <div class="PostNew__body">
+        <%= f.text_area :body, placeholder: "body" %>
+      </div>
+
+      <!-- 送信 -->
+      <div class="PostNew__submit">
+        <%= f.submit 'submit' %>
+      </div>
+
+
+  <% end %>
+
+</div>

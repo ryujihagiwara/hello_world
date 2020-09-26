@@ -7,8 +7,11 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.learner_id = current_learner.id
-    @post.save
-    redirect_to posts_path
+    if @post.save
+       redirect_to posts_path
+    else
+       render 'new'
+    end
   end
 
   def index
@@ -16,6 +19,7 @@ class PostsController < ApplicationController
   end
 
   def show
+  	@post = Post.find(params[:id])
   end
 
   def edit

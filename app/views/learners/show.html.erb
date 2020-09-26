@@ -1,0 +1,41 @@
+<div class="learner">
+  <table class="learner__table">
+
+    <tr class="learner__table-row">
+      <th class="learner__table-head">
+        <%= attachment_image_tag @learner, :profile_image, :fill, 100, 100, fallback: "no_image.jpg", class: "img-circle pull-left profile-thumb" %>
+      </th>
+      <th class="learner__table-head">
+      	<%= @learner.nickname %>
+      </th>
+    </tr>
+
+    <tr class="learner__table-row">
+      <th class="learner__table-head">
+        <p class="learner__table-txt">country</p>
+      </th>
+      <th class="learner__table-head">
+      	<%= @learner.country %>
+      </th>
+    </tr>
+
+    <tr class="learner__table-row">
+      <th class="learner__table-head">
+        <p class="learner__table-txt">native</p>
+      </th>
+      <th class="learner__table-head">
+      	<%= @learner.native %>
+      </th>
+    </tr>
+
+    <tr class="learner__table-row">
+      <th class="learner__table-head">
+        <p class="learner__table-txt">introduction</p>
+      </th>
+      <th class="leaner__table-intro">
+      	  <%= @learner.introduction %>
+      </th>
+    </tr>
+
+  </table>
+</div>

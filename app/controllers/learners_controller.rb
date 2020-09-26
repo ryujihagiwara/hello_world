@@ -16,6 +16,9 @@ class LearnersController < ApplicationController
   	@learner = current_learner
   	if @learner.update(learner_params)
   	   redirect_to learner_path(@learner)
+  	else
+  	   render 'edit'
+  	end
 
   end
 

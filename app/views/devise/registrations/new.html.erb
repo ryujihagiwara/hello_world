@@ -1,49 +1,58 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="row">
+    <div class="registration-title">
+      <h2>Sign up</h2>
+    </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="col-xs-4 col-xs-offset-4 registration-form">
 
-  <div class="field">
-    <%= f.label :nickname %>
-    <%= f.text_field :nickname %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="row learner-font">
+          <p class="col-xs-1">nickname</p>
+          <div class="col-xs-3 col-xs-offset-2"><%= f.text_field :nickname %></div>
+        </div>
+
+        <div class="row learner-font">
+          <p class="col-xs-1">email</p>
+          <div class="col-xs-3 col-xs-offset-2"><%= f.email_field :email, autofocus: true, autocomplete: "email" %></div>
+        </div>
+
+        <div class="row learner-font">
+          <p class="col-xs-1">password</p><br>
+          <% if @minimum_password_length %>
+          <strong>(<%= @minimum_password_length %> characters minimum)</strong>
+          <% end %><br />
+          <div class="col-xs-3 col-xs-offset-3"><%= f.password_field :password, autocomplete: "new-password" %></div>
+        </div>
+
+        <div class="row learner-font">
+          <p class="col-xs-1">password_confirmation</p><br>
+          <div class="col-xs-3 col-xs-offset-2"><%= f.password_field :password_confirmation, autocomplete: "new-password" %></div>
+        </div>
+
+ 　　　  <div class="row learner-font">
+          <p class="col-xs-1">country</p>
+          <div class="col-xs-1 col-xs-offset-2"><%= f.country_select :country, { include_blank: 'where are you from?'}, class: "select-style" %></div>
+        </div>
+
+        <div class="row learner-font">
+          <p class="col-xs-1">learning</p>
+          <div class="col-xs-3 col-xs-offset-4"><%= f.select :learning, Learner.learnings.keys.to_a %></div>
+        </div>
+
+        <div class="row learner-font">
+          <p class="col-xs-1">native</p>
+          <div class="col-xs-3 col-xs-offset-4"><%= f.select :native, { 'Japanese': 'Japanese' , 'English': 'English' , 'Spanish': 'Spanish' , 'German': 'German' , 'French': 'French' , 'Italian': 'Italian' } %></div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-1 col-xs-offset-3"><%= f.submit "Sign up", class: "btn btn-success" %></div>
+        </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :country %>
-    <%= f.country_select :country, { include_blank: 'please select'} %>
-  </div>
-
-  <div class="field">
-    <%= f.label :learning %>
-    <%= f.select :learning, Learner.learnings.keys.to_a %>
-  </div>
-
-  <div class="field">
-    <%= f.label :native %>
-    <%= f.select :native, { 'Japanese': 'Japanese' , 'English': 'English' , 'Spanish': 'Spanish' , 'German': 'German' , 'French': 'French' , 'Italian': 'Italian' } %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

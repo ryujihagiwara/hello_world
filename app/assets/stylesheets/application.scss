@@ -22,8 +22,37 @@
   box-sizing: border-box;
  }
 
+body {
+  height: 100%;
+}
+
 main {
+  height: 800px;
   margin-top: 70px;
+  background-image: url(/assets/image.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.registration-title {
+  padding-top: 40px;
+  text-align: center;
+  color: white;
+}
+
+.registration-form {
+  border: solid 1px white;
+  background-color: white;
+}
+
+.learner-font {
+  margin-top: 10px;
+  color: pink;
+}
+
+.select-style {
+  width: 150px;
+  margin-top: 1px;
 }
 
 .btn-base-1 {
@@ -33,5 +62,16 @@ main {
 .section-title {
   text-align: center;
 }
+
+footer {
+  height: 100px;
+  line-height: 100px;
+  background-color: skyblue;
+}
+
+.footer-text {
+  text-align: center;
+}
+
 
 

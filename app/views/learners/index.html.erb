@@ -1,29 +1,33 @@
-<div class="index">
+<div class="container-fluid">
+  <div class="row", style="background-color: orange;">
+    <div class="col-lg-10 col-lg-offset-1">
 
-  <table class="index__table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>nickname</th>
-        <th>country</th>
-        <th>learning</th>
-        <th>native</th>
-        <th>follower</th>
-      </tr>
-    </thead>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th>nickname</th>
+            <th>country</th>
+            <th>learning</th>
+            <th>native</th>
+            <th>follower</th>
+          </tr>
+        </thead>
 
-    <tbody>
-      <% @learners.each do |learner| %>
-      <tr>
-        <td><%= attachment_image_tag learner, :profile_image, :fill, 60, 60, fallback: "no_image.jpg", class: "img-circle pull-left profile-thumb" %></td>
-        <td><%= learner.nickname %></td>
-        <td><%= learner.country %></td>
-        <td><%= learner.learning %></td>
-        <td><%= learner.native %></td>
-        <!-- <td></td> -->
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+        <tbody>
+          <% @learners.each do |learner| %>
+          <tr>
+            <td><%= attachment_image_tag learner, :profile_image, :fill, 60, 60, fallback: "no_image.jpg", class: "img-circle pull-left profile-thumb" %></td>
+            <td><%= learner.nickname %></td>
+            <td><%= learner.country %></td>
+            <td><%= learner.learning %></td>
+            <td><%= learner.native %></td>
+            <td>followers.count</td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
 
+    </div>
+  </div>
 </div>

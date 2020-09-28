@@ -1,41 +1,47 @@
-<div class="learner">
-  <table class="learner__table">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
 
-    <tr class="learner__table-row">
-      <th class="learner__table-head">
-        <%= attachment_image_tag @learner, :profile_image, :fill, 100, 100, fallback: "no_image.jpg", class: "img-circle pull-left profile-thumb" %>
-      </th>
-      <th class="learner__table-head">
-      	<%= @learner.nickname %>
-      </th>
-    </tr>
+      <table class="table table-striped">
 
-    <tr class="learner__table-row">
-      <th class="learner__table-head">
-        <p class="learner__table-txt">country</p>
-      </th>
-      <th class="learner__table-head">
-      	<%= @learner.country %>
-      </th>
-    </tr>
+        <tr>
+          <th>
+            <%= attachment_image_tag @learner, :profile_image, :fill, 100, 100, fallback: "no_image.jpg", class: "img-circle pull-left profile-thumb" %>
+          </th>
+          <th>
+      	    <%= @learner.nickname %>
+          </th>
+        </tr>
 
-    <tr class="learner__table-row">
-      <th class="learner__table-head">
-        <p class="learner__table-txt">native</p>
-      </th>
-      <th class="learner__table-head">
-      	<%= @learner.native %>
-      </th>
-    </tr>
+        <tr>
+          <th>
+            <p>country</p>
+          </th>
+          <th>
+      	    <%= @learner.country %>
+         </th>
+        </tr>
 
-    <tr class="learner__table-row">
-      <th class="learner__table-head">
-        <p class="learner__table-txt">introduction</p>
-      </th>
-      <th class="leaner__table-intro">
-      	  <%= @learner.introduction %>
-      </th>
-    </tr>
+        <tr>
+          <th>
+            <p>native</p>
+          </th>
+         <th>
+      	   <%= @learner.native %>
+         </th>
+        </tr>
 
-  </table>
+        <tr>
+          <th>
+            <p>introduction</p>
+          </th>
+          <th>
+      	    <%= @learner.introduction %>
+          </th>
+        </tr>
+
+      </table>
+
+    </div>
+  </div>
 </div>

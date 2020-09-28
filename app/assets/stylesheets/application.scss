@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
  * {
   padding: 0;
@@ -21,7 +23,15 @@
  }
 
 main {
-  padding-top: 100px;
+  margin-top: 70px;
+}
+
+.btn-base-1 {
+  margin-bottom: 15px;
+}
+
+.section-title {
+  text-align: center;
 }
 
 

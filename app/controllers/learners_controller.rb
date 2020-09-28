@@ -19,7 +19,6 @@ class LearnersController < ApplicationController
   	else
   	   render 'edit'
   	end
-
   end
 
   private

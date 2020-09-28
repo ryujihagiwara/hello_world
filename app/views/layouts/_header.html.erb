@@ -1,20 +1,22 @@
-<div class="header">
-  <div class="header__left">
-    <p>logo</p>
-  </div>
+<!-- <header class="navbar navbar-fixed-top navbar-inverse", style="background-color: skyblue;"> -->
+  <div class="container">
+    <%= link_to 'Hello World', root_path, id: "logo" %>
 
-  <div class="header__right">
-    <% if learner_signed_in? %>
-  	  <%= link_to 'My Page', learner_path(current_learner), class: "header__link" %>
-  	  <%= link_to 'Post New', new_post_path, class: "header__link" %>
-  	  <%= link_to 'Moments', posts_path, class: "header__link" %>
-  	  <%= link_to 'Learners', learners_path, class: "header__link" %>
-  	  <%= link_to 'Sign Out', destroy_learner_session_path, method: :delete, class: "header__link" %>
-  	<% else %>
-      <%= link_to 'About', homes_about_path, class: "header__link" %>
-      <%= link_to 'Moments', posts_path, class: "header__link" %>
-      <%= link_to 'Sign Up', new_learner_registration_path, class: "header__link" %>
-      <%= link_to 'Sign_in', new_learner_session_path, class: "header__link" %>
-    <% end %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <% if learner_signed_in? %>
+  	      <li><%= link_to 'My Page', learner_path(current_learner), class: "header__link" %></li>
+  	      <li><%= link_to 'Post New', new_post_path, class: "header__link" %></li>
+  	      <li><%= link_to 'Moments', posts_path, class: "header__link" %></li>
+  	      <li><%= link_to 'Learners', learners_path, class: "header__link" %></li>
+  	      <li><%= link_to 'Sign Out', destroy_learner_session_path, method: :delete, class: "header__link" %></li>
+  	    <% else %>
+          <li><%= link_to 'About', homes_about_path, class: "header__link" %></li>
+          <li><%= link_to 'Moments', posts_path, class: "header__link" %></li>
+          <li><%= link_to 'Sign Up', new_learner_registration_path, class: "header__link" %></li>
+          <li><%= link_to 'Sign_in', new_learner_session_path, class: "header__link" %></li>
+        <% end %>
+      </ul>
+    </nav>
   </div>
-</div>
+<!-- </header> -->

@@ -2,7 +2,7 @@
   <div class="row learner">
     <div class="col-lg-10 col-lg-offset-1">
 
-      <table class="table table-hover">
+      <table class="table">
         <thead>
           <tr>
             <th></th>
@@ -17,7 +17,7 @@
         <tbody>
           <% @learners.each do |learner| %>
           <tr>
-            <td><%= attachment_image_tag learner, :profile_image, :fill, 60, 60, fallback: "no_image.jpg", class: "img-circle pull-left profile-thumb" %></td>
+            <td><%= attachment_image_tag learner, :profile_image, :fill, 80, 80, fallback: "no_image.jpg", size: '80x80', class: "img-circle pull-left profile-thumb" %></td>
             <td><%= learner.nickname %></td>
             <td><%= learner.country %></td>
             <td><%= learner.learning %></td>

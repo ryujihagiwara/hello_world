@@ -42,12 +42,14 @@ main {
 
 .registration-form {
   border: solid 1px white;
+  border-radius: 20px;
+  box-shadow: 0 0 8px white;
   background-color: white;
 }
 
 .learner-font {
   margin-top: 10px;
-  color: pink;
+  color: black;
 }
 
 .select-style {

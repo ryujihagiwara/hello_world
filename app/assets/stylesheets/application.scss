@@ -29,7 +29,7 @@ body {
 main {
   height: 800px;
   margin-top: 70px;
-  background-image: url(/assets/image.jpg);
+  background-image: image-url("image.jpg");
   background-position: center;
   background-size: cover;
 }

@@ -1,25 +1,27 @@
+<section class="sign-up">
 <div class="container">
   <div class="row">
-    <div class="registration-title">
-      <h2>Sign up</h2>
-    </div>
 
-    <div class="col-xs-4 col-xs-offset-4 registration-form">
+    <div class="col-xs-4 col-xs-offset-5 registration-form">
+
+
+      <h2>Sign up</h2>
+
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
-        <div class="row learner-font">
+        <div class="row registration-font">
           <p class="col-xs-1">nickname</p>
           <div class="col-xs-3 col-xs-offset-2"><%= f.text_field :nickname %></div>
         </div>
 
-        <div class="row learner-font">
+        <div class="row registration-font">
           <p class="col-xs-1">email</p>
           <div class="col-xs-3 col-xs-offset-2"><%= f.email_field :email, autofocus: true, autocomplete: "email" %></div>
         </div>
 
-        <div class="row learner-font">
+        <div class="row registration-font">
           <p class="col-xs-1">password</p><br>
           <% if @minimum_password_length %>
           <strong>(<%= @minimum_password_length %> characters minimum)</strong>
@@ -27,22 +29,22 @@
           <div class="col-xs-3 col-xs-offset-3"><%= f.password_field :password, autocomplete: "new-password" %></div>
         </div>
 
-        <div class="row learner-font">
+        <div class="row registration-font">
           <p class="col-xs-1">password_confirmation</p><br>
           <div class="col-xs-3 col-xs-offset-2"><%= f.password_field :password_confirmation, autocomplete: "new-password" %></div>
         </div>
 
- 　　　  <div class="row learner-font">
+ 　　　  <div class="row registration-font">
           <p class="col-xs-1">country</p>
           <div class="col-xs-1 col-xs-offset-2"><%= f.country_select :country, { include_blank: 'where are you from?'}, class: "select-style" %></div>
         </div>
 
-        <div class="row learner-font">
+        <div class="row registration-font">
           <p class="col-xs-1">learning</p>
           <div class="col-xs-3 col-xs-offset-4"><%= f.select :learning, Learner.learnings.keys.to_a %></div>
         </div>
 
-        <div class="row learner-font">
+        <div class="row registration-font">
           <p class="col-xs-1">native</p>
           <div class="col-xs-3 col-xs-offset-4"><%= f.select :native, { 'Japanese': 'Japanese' , 'English': 'English' , 'Spanish': 'Spanish' , 'German': 'German' , 'French': 'French' , 'Italian': 'Italian' } %></div>
         </div>
@@ -56,3 +58,4 @@
     </div>
   </div>
 </div>
+</section>

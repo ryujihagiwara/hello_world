@@ -24,20 +24,38 @@
 
 body {
   height: 100%;
+  background-image: image-url("image.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  height: 15%;
+}
+
+.nav.navbar-nav.navbar-right {
+  margin: 10px;
+}
+
+.header-list-item {
+  font-size: 15px;
 }
 
 main {
   height: 800px;
   margin-top: 70px;
-  background-image: image-url("image.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
 .registration-title {
   padding-top: 40px;
   text-align: center;
   color: white;
+}
+
+.sign-up {
+  width: 40%;
+  padding-top: 70px;
+  text-align: center;
 }
 
 .registration-form {
@@ -47,7 +65,21 @@ main {
   background-color: white;
 }
 
-.learner-font {
+
+.sign-in {
+  width: 30%;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.login-form {
+  border: solid 1px white;
+  border-radius: 20px;
+  box-shadow: 0 0 8px white;
+  background-color: white;
+}
+
+.registration-font {
   margin-top: 10px;
   color: black;
 }

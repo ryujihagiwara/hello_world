@@ -1,39 +1,65 @@
-<h2>edit</h2>
+<div class="learrner-edit">
+  <div class="container">
+    <div class="row">
 
-<%= form_for(@learner) do |f| %>
+      <div class="col-xs-10 col-xs-offset-1 learner-edit-form">
 
-  <div class="field">
-    <%= f.label :nickname %>
-    <%= f.text_field :nickname %>
+        <h2 class="learner-edit-title">edit profile</h2>
+
+      <%= form_for(@learner) do |f| %>
+      <div class="row">
+
+
+
+        <div class="col-xs-6 edit-left">
+
+          <div class="edit-profile-image">
+            <p class="edit-font">Profile Image</p>
+            <%= f.attachment_field :profile_image, class: "profile-image-form" %>
+          </div>
+
+        </div>
+
+        <div class="col-xs-6 edit-right">
+
+          <div class="edit-nickname">
+            <p class="edit-font">Nickname</p>
+            <%= f.text_field :nickname %>
+          </div>
+
+          <div class="edit-intro">
+            <p class="edit-font">introduction</p>
+            <%= f.text_area :introduction %>
+          </div>
+
+          <div class="edit-country">
+            <p class="edit-font">country</p>
+            <%= f.country_select :country, { include_blank: 'please select'}, class: "select-style" %>
+          </div>
+
+          <div class="edit-learning">
+            <p class="edit-font">learning</p>
+            <%= f.select :learning, Learner.learnings.keys.to_a %>
+          </div>
+
+          <div class="edit-native">
+            <p class="edit-font">native</p>
+            <%= f.select :native, { 'Japanese': 'Japanese' , 'English': 'English' , 'Spanish': 'Spanish' , 'German': 'German' , 'French': 'French' , 'Italian': 'Italian' } %>
+          </div>
+
+
+
+        </div>
+
+        <div class="edit-update">
+            <%= f.submit "Update", class: "btn btn-block btn-success" %>
+          </div>
+
+      </div>
+      <% end %>
+
+      </div>
+
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :profile_image %>
-    <%= f.attachment_field :profile_image %>
-
-
-  <div class="field">
-    <%= f.label :introduction %>
-    <%= f.text_area :introduction %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :country %>
-    <%= f.country_select :country, { include_blank: 'please select'} %>
-  </div>
-
-  <div class="field">
-    <%= f.label :learning %>
-    <%= f.select :learning, Learner.learnings.keys.to_a %>
-  </div>
-
-  <div class="field">
-    <%= f.label :native %>
-    <%= f.select :native, { 'Japanese': 'Japanese' , 'English': 'English' , 'Spanish': 'Spanish' , 'German': 'German' , 'French': 'French' , 'Italian': 'Italian' } %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
+</div>

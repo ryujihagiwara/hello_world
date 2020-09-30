@@ -3,8 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .post-form {
-  margin: 50px auto;
+  margin: 0 auto;
   border-radius: 20px;
   box-shadow: 0 0 8px white;
   background-color: white;
+}
+
+.post-new-form {
+  margin-top: 150px;
+}
+
+// 投稿一覧画面
+
+.posts-index {
+  margin-top: 100px;
 }

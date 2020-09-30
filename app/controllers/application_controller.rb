@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   # ログイン後の遷移先指定
   def after_sign_in_path_for(resource)
-    homes_about_path
+    learner_path(current_learner.id)
   end
 
   # ログアウト後の遷移先指定

@@ -2,13 +2,91 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.learner-show {
-  magrin-top: 50px;
+
+// 学習者詳細画面
+
+.learner-info {
+  width: 50%;
 }
 
-.table {
-  margin-top: 50px;
+.col-xs-12.learner-block {
+  margin-top: 30px;
+  background-color: white;
+}
+
+// 学習者編集画面
+
+.learner-edit-form {
+  margin-top: 100px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px white;
+  background-color: white;
+}
+
+.learner-edit-title {
+  text-align: center;
+}
+
+.edit-left {
+  text-align: center;
+}
+
+.edit-profile-image {
+  padding-top: 100px;
+}
+
+.profile-image-form {
+  margin-left: 80px;
+}
+
+.edit-font {
+  font-size: 20px;
+  color: black;
+}
+
+.edit-nickname {
+  margin-left: 90px;
+}
+
+.edit-intro {
+  margin-left: 90px;
+}
+
+.edit-country {
+  margin-left: 90px;
+}
+
+.select-style {
+  width: 150px;
+}
+
+.edit-learning {
+  margin-left: 90px;
+}
+
+.edit-native {
+  margin-left: 90px;
+  margin-bottom: 10px;
+}
+
+.edit-update {
+  margin: 15px;
+}
+
+
+// 学習者一覧画面
+
+.learners-index {
+  margin-top: 100px;
   border-radius: 10px;
   box-shadow: 0 0 8px white;
   background-color: white;
 }
+
+.learners-index th {
+  font-size: 20px;
+}
+
+.learners-index td {
+  font-size: 15px;
+ }

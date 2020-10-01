@@ -15,6 +15,68 @@
 
 // 投稿一覧画面
 
-.posts-index {
+.post-index {
   margin-top: 100px;
+}
+
+.post-index-right {
+  padding: 20px;
+  background-color: white;
+}
+
+.post-index-image {
+  padding: 30px;
+}
+
+.post-text {
+  margin-top: 20px;
+}
+
+// 投稿詳細画面
+
+.post-show {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px white;
+  background-color: white;
+}
+
+.post-show-content {
+  margin-top: 200px;
+}
+
+.wrapper {
+  display: flex;
+  padding: 40px;
+  justify-content: center;
+}
+
+.post-image {
+  margin-right: 30px;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+}
+
+.profile-text {
+  width: 45%;
+  margin-left: 30px;
+}
+
+.post-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.body-text {
+  padding-top: 30px;
+  font-size: 15px;
+}
+
+.btn {
+  margin-top: 15px
 }

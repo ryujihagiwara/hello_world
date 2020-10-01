@@ -1,0 +1,24 @@
+        <% comments.each do |comment| %>
+          <tr>
+            <td><%= attachment_image_tag comment.learner, :profile_image, :fill, 80, 80, fallback: "no_image.jpg", size: '80x80', class: "img-circle pull-left profile-thumb" %></td>
+            <td>
+              <%= link_to learner_path(comment.learner, comment) do %>
+                <%= comment.learner.nickname %>
+              <% end %>
+            </td>
+            <td><%= comment.created_at %></td>
+            <td><%= comment.comment %></td>
+            <% if comment.learner_id == current_learner.id %>
+            <td>
+              <%= link_to  edit_post_comment_path(comment), class: "btn" do %>
+                <i class="fas fa-edit text-primary"></i>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to post_comment_path(comment), method: :delete, class: "btn" do %>
+                <i class="fas fa-trash-alt"></i>
+              <% end %>
+            </td>
+            <% end %>
+          </tr>
+          <% end %>

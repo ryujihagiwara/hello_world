@@ -1,33 +1,53 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-10 col-lg-offset-1">
+<div class="container">
 
-      <table class="table table-hover posts-index">
-        <thead>
-          <tr>
-            <th></th>
-            <th>title</th>
-            <th>date</th>
-            <th>nickname</th>
-            <th>comments</th>
-            <th>good!</th>
-          </tr>
-        </thead>
+    <div class="row post-index">
 
-        <tbody>
-          <% @posts.each do |post| %>
-          <tr>
-            <td><%= attachment_image_tag post, :image, :fill, 60, 60, fallback: "no_image.jpg", size: '80x80', class: "img-circle pull-left profile-thumb" %></td>
-            <td><%= post.title %></td>
-            <td><%= post.created_at %></td>
-            <td><%= post.learner.nickname %></td>
-            <td><%= post.comments.count %></td>
-            <td><%= post.favorites.count %></td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
+      <div class="col-md-3">
 
-   </div>
+        <h1 class="my-4">Post Category</h1>
+        <div class="list-group">
+          <a href="#" class="list-group-item">Category 1</a>
+          <a href="#" class="list-group-item">Category 2</a>
+          <a href="#" class="list-group-item">Category 3</a>
+        </div>
+
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-2"></div>
+
+      <div class="col-lg-7 post-index-right">
+        <% @posts.each do |post| %>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 post-index-image">
+              <%= attachment_image_tag post, :image, :fill, 500, 400 %>
+              <div class="post-body">
+                <h4 class="post-by">
+                  <%= attachment_image_tag post.learner, :profile_image, :fill, 60,60, fallback: "no_image.jpg", size: '80x80', class: "img-circle pull-left profile-thumb" %>
+                  <p class="nickname"><%= post.learner.nickname %></p>
+                </h4>
+              </div>
+
+            </div>
+            <p class="post-text">
+              <%= link_to post_path(post.id) do %>
+                <%= post.title %>
+              <% end %>
+            </p>
+              <div class="post-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+          </div>
+
+        </div>
+        <!-- /.row -->
+        <% end %>
+      </div>
+      <!-- /.col-lg-7 -->
+
+    </div>
+    <!-- /.row -->
+
   </div>
-</div>
+  <!-- /.container -->

@@ -1,11 +1,11 @@
 class CommentsController < ApplicationController
 
   def create
-    @post = Post.find(params[:id])
-    @comment = current_learner.comments.new(comment_params)
+    @post = Post.find(params[:post_id])
+    @comment = Comment.new(comment_params)
+    @comment.learner_id = current_learner.id
     @comment.post_id = @post.id
     @comment.save
-    redirect_to request.referer
   end
 
   def edit

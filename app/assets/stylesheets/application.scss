@@ -15,6 +15,8 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import 'font-awesome-sprockets';
+ @import 'font-awesome';
 
  * {
   padding: 0;
@@ -23,10 +25,11 @@
  }
 
 body {
-  height: 100%;
   background-image: image-url("image.jpg");
   background-position: center;
   background-size: cover;
+  min-height: 100vh;
+  position: relative;/*←相対位置*/
 }
 
 header {
@@ -42,8 +45,9 @@ header {
 }
 
 main {
-  height: 800px;
+  height: 100%;
   margin-top: 70px;
+  padding-bottom: 120px;
 }
 
 .registration-title {
@@ -98,8 +102,12 @@ main {
 }
 
 footer {
+  width: 100%;
   height: 100px;
   line-height: 100px;
+  margin-top: 50px;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
   background-color: skyblue;
 }
 

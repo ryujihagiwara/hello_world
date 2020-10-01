@@ -1,0 +1,70 @@
+<section class="slice sct-color-1">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 post-new-form">
+
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3 post-form">
+          <div class="section-title-wrapper">
+          	<h3 class="section-title">
+          	  <span>Edit Post</span>
+          	</h3>
+          </div>
+
+          <%= form_for(@post) do |f| %>
+          <!-- エラーメッセージ -->
+          <% if @post.errors.any? %>
+            <div class="error_explanation">
+              <h3><%= @post.errors.count %>error prohibited this obj from being saved:</h3>
+		      <ul>
+		        <% @post.errors.full_messages.each do |message| %>
+			      <li><%= message %></li>
+			    <% end %>
+		      </ul>
+	        </div>
+	      <% end %>
+
+
+          <!-- 画像登録フォーム -->
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="post-image">
+                <%= f.attachment_field :image %>
+              </div>
+            </div>
+          </div>
+          <br>
+          <!-- タイトル入力フォーム -->
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="post-title">
+                <%= f.text_field :title, class: "form-control", placeholder: "title" %>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- 本文入力フォーム -->
+          <div class="row">
+          	<div class="col-xs-12">
+              <div class="post-body">
+                <%= f.text_area :body, class: "form-control", rows:"3", placeholder: "body" %>
+              </div>
+            </div>
+          </div>
+   		  <hr>
+
+          <!-- 送信 -->
+            <%= f.submit 'Update', class: "btn btn-block btn-success btn-base-1 mt-20" %>
+
+
+          <% end %>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,16 +1,59 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-9 col-xs-3">
+<div class="post-show">
+  <div class="container-fluid post-show-content">
+
+     <div class="wrapper">
       <div class="post-image">
-        <%= attachment_image_tag @post, :image, :fill, 60, 60, fallback: "no_image.jpg", class: "img-circle pull-left profile-thumb" %>
+        <%= attachment_image_tag @post, :image, :fill, 300, 300, fallback: "no_image.jpg", size: '300x300', class: "img-square" %>
       </div>
 
-      <div class="post-title">
-        <%= @post.title %>
+      <div class="profile-text">
+        <div class="post-title">
+          <%= @post.title %>
+        </div>
+        <div class="post-body">
+          <p class="body-text">
+            <%= @post.body %>
+          </p>
+        </div>
       </div>
-      <div class="post-body">
-        <%= @post.body %>
+     </div>
+
+     <div class="row">
+       <div class="col-xs-10 col-xs-offset-1">
+         <table class="table table-hover comment-index">
+
+        <thead>
+          <tr>
+            <th></th>
+            <th>name</th>
+            <th>date</th>
+            <th>comment</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody class="comment-area">
+
+          <%= render 'comments/index', comments: @comments %>
+
+        </tbody>
+      </table>
+
+     <div class="row">
+        <div class="col-xs-12">
+          <%= form_with(model: [@post, @comment], url: post_comments_path(@post)) do |f| %>
+          <%= f.text_area :comment, class: "form-control", rows:"3", placeholder: "comment here" %>
+          <%= f.submit 'new comment', class: "btn btn-success btn-block center-block" %>
+          <% end %>
+        </div>
+     </div>
+
       </div>
+     </div>
+
+
     </div>
+
   </div>
 </div>

@@ -3,46 +3,67 @@
     <div class="row">
       <div class="col-xs-12 learner-block">
 
-        <table class="learner2">
-        <thead>
-        <tr>
-          <th>
-            <%= attachment_image_tag @learner, :profile_image, :fill, 100, 100, fallback: "no_image.jpg", class: "img-circle pull-left profile-thumb" %>
-          </th>
-          <th>
-      	    <%= @learner.nickname %>
-          </th>
-        </tr>
-        </thead>
+        <!-- learner image/nickname -->
+        <div class="learner-image">
+          <%= attachment_image_tag @learner, :profile_image, :fill, 200, 200, fallback: "no_image.jpg", class: "img-circle" %>
+          <p class="learner-nickname"><%= @learner.nickname %></p>
+        </div>
+        <!-- // -->
 
-        <tr>
-          <th>
-            <p>country</p>
-          </th>
-          <th>
-      	    <%= @learner.country %>
-         </th>
-        </tr>
+        <!-- country -->
+        <div class="row country">
+          <div class="col-xs-4 col-xs-offset-2">
+            <p class="info-item">Country</p>
+          </div>
+          <div class="col-xs-2"></div>
+          <div class="col-xs-3">
+            <span><%= @learner.country %></span>
+          </div>
+        </div>
+        <!-- // -->
 
-        <tr>
-          <th>
-            <p>native</p>
-          </th>
-         <th>
-      	   <%= @learner.native %>
-         </th>
-        </tr>
+        <!-- native -->
+        <div class="row native">
+          <div class="col-xs-4 col-xs-offset-2">
+            <p class="info-item">Native</p>
+          </div>
+          <div class="col-xs-2"></div>
+          <div class="col-xs-3">
+            <span><%= @learner.native %></span>
+          </div>
+        </div>
+        <!-- // -->
 
-        <tr>
-          <th>
-            <p>introduction</p>
-          </th>
-          <th>
-      	    <%= @learner.introduction %>
-          </th>
-        </tr>
+        <!-- learning -->
+        <div class="row learning">
+          <div class="col-xs-4 col-xs-offset-2">
+            <p class="info-item">Learning</p>
+          </div>
+          <div class="col-xs-2"></div>
+          <div class="col-xs-3">
+            <span><%= @learner.learning %></span>
+          </div>
+        </div>
+        <!-- // -->
 
-      </table>
+        <!-- introduction -->
+        <div class="row intro">
+          <div class="col-xs-4 col-xs-offset-2">
+            <p class="info-item">Introduction</p>
+          </div>
+          <div class="col-xs-2"></div>
+          <div class="col-xs-3"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-2">
+             <span><%= @learner.introduction %></span>
+          </div>
+        </div>
+
+
+        <!-- // -->
+
 
       </div>
     </div>

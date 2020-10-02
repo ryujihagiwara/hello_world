@@ -9,9 +9,40 @@
   width: 50%;
 }
 
-.col-xs-12.learner-block {
-  margin-top: 30px;
-  background-color: white;
+.learner-block {
+  margin-top: 100px;
+}
+
+.learner-image {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.learner-nickname {
+  font-size: 30px;
+  color: white;
+}
+
+.info-item {
+  font-size: 20px;
+  color: white;
+}
+
+span {
+  font-size: 20px;
+  color: white;
+}
+
+.country {
+  border-bottom: 1px solid white;
+}
+
+.native {
+  border-bottom: 1px solid white;
+}
+
+.learning {
+  border-bottom: 1px solid white;
 }
 
 // 学習者編集画面

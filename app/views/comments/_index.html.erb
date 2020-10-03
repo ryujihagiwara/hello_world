@@ -9,9 +9,6 @@
     <td><%= comment.comment %></td>
   <% if comment.learner == current_learner %>
     <td>
-      <%= link_to  edit_post_comment_path(comment), class: "btn" do %>
-        <i class="fas fa-edit text-primary"></i>
-      <% end %>
     </td>
     <td>
       <%= link_to post_comment_path(comment.post, comment), method: :delete, remote: true, class: "btn" do %>

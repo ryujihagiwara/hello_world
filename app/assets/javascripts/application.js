@@ -16,3 +16,44 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+
+// 学習者編集 画像プレビュー
+
+$(function() {
+  function readURL(input) {
+    if(input.files && input.files[0]){
+      var reader = new FileReader();
+      reader.onload = function (e) {
+      	$('.img_prev').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  $('.profile-image-form').change(function() {
+  	readURL(this);
+  });
+});
+
+// 新規投稿 画像プレビュー
+
+$(function(){
+  function readURL(input) {
+    if(input.files && input.files[0]){
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $('.img-responsive').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  $('.img-field').change(function() {
+    readURL(this);
+  });
+});
+
+
+
+
+

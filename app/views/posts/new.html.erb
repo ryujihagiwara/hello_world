@@ -27,16 +27,17 @@
 
           <!-- 画像登録フォーム -->
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-xs-7 col-xs-offset-2 post-image-box">
               <div class="post-image">
-                <%= f.attachment_field :image %>
+                <%= f.file_field :image, class: "img-field", style: "display: none;" %>
+                <%= attachment_image_tag @post, :image, fallback: "no_image.jpg", size: "400x200", onClick: "$('.img-field').click()", class: "img-responsive" %>
               </div>
             </div>
           </div>
           <br>
           <!-- タイトル入力フォーム -->
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-xs-6 col-xs-offset-3">
               <div class="post-title">
                 <%= f.text_field :title, class: "form-control", placeholder: "title" %>
               </div>

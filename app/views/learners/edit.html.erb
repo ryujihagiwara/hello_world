@@ -15,7 +15,8 @@
 
           <div class="edit-profile-image">
             <p class="edit-font">Profile Image</p>
-            <%= f.attachment_field :profile_image, class: "profile-image-form" %>
+            <%= attachment_image_tag @learner, :profile_image, :fill, 300, 150, fallback: "no_image.jpg", size: '300x200', onClick: "$('.profile-image-form').click()", class: "image img-responsive img_prev" %>
+            <%= f.file_field :profile_image, class: "profile-image-form", style: "display: none;" %>
           </div>
 
         </div>

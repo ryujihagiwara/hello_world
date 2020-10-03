@@ -55,10 +55,20 @@
           <div class="col-xs-3"></div>
         </div>
 
-        <div class="row">
+        <div class="row intro-detail">
           <div class="col-xs-10 col-xs-offset-2">
              <span><%= @learner.introduction %></span>
           </div>
+        </div>
+
+        <div class="row link">
+            <div class="col-xs-4">
+              <% if @learner.id == current_learner.id %>
+                <%= link_to 'Edit', edit_learner_path(@learner), class: "btn btn-block btn-success" %>
+              <% end %>
+            </div>
+            <div class=col-xs-4></div>
+            <div class="col-xs-4"></div>
         </div>
 
 

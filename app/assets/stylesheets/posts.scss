@@ -2,16 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.post-form {
-  margin: 0 auto;
-  border-radius: 20px;
-  box-shadow: 0 0 8px white;
-  background-color: white;
-}
+// 新規投稿画面
 
 .post-new-form {
   margin-top: 150px;
 }
+
+.post-form {
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 0 8px white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-responsive:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transform: scale(1.05, 1.05);
+}
+
+
 
 // 投稿一覧画面
 

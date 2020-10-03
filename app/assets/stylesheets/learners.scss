@@ -45,6 +45,10 @@ span {
   border-bottom: 1px solid white;
 }
 
+.intro-detail {
+  border-bottom: 1px solid white;
+}
+
 // 学習者編集画面
 
 .learner-edit-form {
@@ -63,7 +67,13 @@ span {
 }
 
 .edit-profile-image {
-  padding-top: 100px;
+  padding-top: 20px;
+  margin-left: 70px;
+}
+
+.image{
+  margin-left: 48px;
+  margin-bottom: 30px;
 }
 
 .profile-image-form {
@@ -102,6 +112,12 @@ span {
 
 .edit-update {
   margin: 15px;
+}
+
+.img_prev:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transform: scale(1,1, 1.1);
 }
 
 

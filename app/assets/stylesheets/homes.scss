@@ -1,3 +1,35 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// topページ
+
+
+.earth {
+  width: 450px;
+  height: 450px;
+  margin-top: 120px;
+  border-radius: 50%;
+  background-image: image-url("astro.jpg");
+  background-position: left;
+}
+
+.main-title {
+  height: 100px;
+  padding-top: 100px;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+.main-text {
+  height: 200px;
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  color: white;
+  font-size: 25px;
+}
+
+

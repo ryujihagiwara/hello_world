@@ -60,14 +60,20 @@
              <span><%= @learner.introduction %></span>
           </div>
         </div>
+        <!-- // -->
 
         <div class="row link">
+
+            <!-- 学習者編集ボタン -->
             <div class="col-xs-4">
               <% if @learner.id == current_learner.id %>
                 <%= link_to 'Edit', edit_learner_path(@learner), class: "btn btn-block btn-success" %>
               <% end %>
             </div>
             <div class=col-xs-4></div>
+            <!-- // -->
+
+            <!-- フォローボタン -->
             <div class="col-xs-4">
               <% unless @learner == current_learner %>
                 <% if current_learner.following?(@learner) %>
@@ -77,6 +83,8 @@
                 <% end %>
               <% end %>
             </div>
+            <!-- // -->
+
         </div>
 
 

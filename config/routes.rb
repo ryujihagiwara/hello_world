@@ -11,5 +11,9 @@ Rails.application.routes.draw do
   resource :favorites, only: [:create, :destroy]
   end
 
+  post '/follow/:id' => 'relationships#follow', as: 'follow'
+  post '/unfollow/:id' => 'relationships#unfollow', as: 'unfollow'
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

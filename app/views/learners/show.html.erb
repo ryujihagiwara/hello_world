@@ -68,7 +68,15 @@
               <% end %>
             </div>
             <div class=col-xs-4></div>
-            <div class="col-xs-4"></div>
+            <div class="col-xs-4">
+              <% unless @learner == current_learner %>
+                <% if current_learner.following?(@learner) %>
+                  <%= link_to 'unfollow', unfollow_path(@learner), method: :post, class: "btn btn-block btn-primary" %>
+                <% else %>
+                  <%= link_to 'follow', follow_path(@learner), method: :post, class: "btn btn-block btn-danger" %>
+                <% end %>
+              <% end %>
+            </div>
         </div>
 
 

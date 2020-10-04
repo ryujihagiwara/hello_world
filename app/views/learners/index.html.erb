@@ -10,7 +10,7 @@
             <th>country</th>
             <th>learning</th>
             <th>native</th>
-            <th>follower</th>
+            <th>followed</th>
           </tr>
         </thead>
 
@@ -26,7 +26,7 @@
             <td><%= learner.country %></td>
             <td><%= learner.learning %></td>
             <td><%= learner.native %></td>
-            <td>followers.count</td>
+            <td><%= learner.followed.count %></td>
           </tr>
           <% end %>
         </tbody>

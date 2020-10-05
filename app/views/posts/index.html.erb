@@ -2,32 +2,18 @@
 
     <div class="row post-index">
 
-      <div class="col-xs-3">
 
-        <h1 class="my-4">Post Category</h1>
-        <div class="list-group">
-          <a href="#" class="list-group-item">Category 1</a>
-          <a href="#" class="list-group-item">Category 2</a>
-          <a href="#" class="list-group-item">Category 3</a>
-        </div>
-
-      </div>
-      <!-- /.col-lg-3 -->
-
-      <div class="col-xs-2"></div>
 
       <!-- post index -->
-      <div class="col-xs-5 post-index-right">
+      <div class="col-xs-12 post-index-right">
         <% @posts.each do |post| %>
-        <div class="row <%= post.id %>">
+        <div class="post-content-box <%= post.id %>">
 
           <%= render 'post', post: post %>
 
         </div>
 
         <% end %>
-      </div>
-      <!-- // -->
 
     </div>
     <!-- /.row -->

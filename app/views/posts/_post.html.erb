@@ -1,65 +1,59 @@
-<div class="col-xs-12 post-content">
+<div class="post-content">
 
-            <!-- learner image/nickname -->
-            <div class="row">
-              <div class="col-xs-3">
-                <%= attachment_image_tag post.learner, :profile_image, :fill, 60,60, fallback: "no_image.jpg", size: '80x80', class: "img-circle" %>
-              </div>
-              <div class="col-xs-4 col-xs-offset-1 post-by">
-                <strong class="nickname">
-                  <%= link_to learner_path(post.learner.id) do %>
-                    <%= post.learner.nickname %>
-                  <% end %>
-                </strong>
-              </div>
-            </div>
-            <!-- // -->
+  <!-- learner image/nickname -->
+    <div class="learner-image-left">
+      <%= attachment_image_tag post.learner, :profile_image, :fill, 60,60, fallback: "no_image.jpg", size: '80x80', class: "img-circle" %>
+      <strong class="nickname">
+        <%= link_to learner_path(post.learner.id) do %>
+          <%= post.learner.nickname %>
+        <% end %>
+      </strong>
+    </div>
+  <!-- // -->
 
-            <!-- post title -->
-            <div class="row">
-              <div class="col-xs-12 col-xs-offset-2">
-                <%= link_to post_path(post) do %>
-                  <%= post.title %>
-                <% end %>
-              </div>
-            </div>
-            <!-- // -->
+  <!-- post title -->
+    <div class="post-title-center">
+      <%= link_to post_path(post) do %>
+        <%= post.title %>
+      <% end %>
+    </div>
+  <!-- // -->
 
-            <div class="row blank-space"></div>
+    <div class=" blank-space"></div>
 
-            <!-- post body -->
-            <div class="row">
-              <div class="col-xs-12">
-                <%= post.body %>
-              </div>
-            </div>
+  <!-- post body -->
+    <div class="post-body">
+      <%= post.body %>
+    </div>
 
-            <!-- post image -->
-            <div class="row">
-              <div class="col-xs-6 post-index-image">
-                <%= attachment_image_tag post, :image, :fill, 200, 150 %>
-              </div>
-            </div>
-            <!-- // -->
+  <!-- post image -->
+    <div class="post-index-image">
+      <%= attachment_image_tag post, :image, :fill, 200, 150 %>
+    </div>
+  <!-- // -->
 
-              <!-- いいね　アイコン -->
-              <div class="post-footer">
-                <strong class="comment-icon">
-                  <i class="far fa-comment"></i>
-                  <%= post.comments.count %>
-                </strong>
-                <strong class="good-icon">
-                  <% if post.favorited_by?(current_learner) %>
-                    <%= link_to post_favorites_path(post.id), method: :delete, remote: true do %>
-                      <i class="fas fa-heart red"></i>
-                    <% end %>
-                  <% else %>
-                    <%= link_to post_favorites_path(post.id), method: :post, remote: true do %>
-                      <i class="far fa-heart"></i>
-                    <% end %>
-                  <% end %>
-                    <%= post.favorites.count %>
-                </strong>
-              </div>
-              <!-- // -->
-          </div>
+  <!-- コメント　アイコン -->
+    <div class="post-footer">
+      <strong class="comment-icon">
+        <i class="far fa-comment"></i>
+        <%= post.comments.count %>
+      </strong>
+
+    <!-- いいね　アイコン -->
+      <strong class="good-icon">
+        <% if post.favorited_by?(current_learner) %>
+          <%= link_to post_favorites_path(post.id), method: :delete, remote: true do %>
+            <i class="fas fa-heart red"></i>
+          <% end %>
+        <% else %>
+          <%= link_to post_favorites_path(post.id), method: :post, remote: true do %>
+            <i class="far fa-heart"></i>
+          <% end %>
+        <% end %>
+        <%= post.favorites.count %>
+      </strong>
+    </div>
+  <!-- // -->
+
+
+</div>

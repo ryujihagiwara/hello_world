@@ -31,32 +31,59 @@
 
 .post-index-right {
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
-.post-content {
-  padding: 20px 0 50px 0;
-  background-color: white;
+.post-content-box {
+  width: 30%;
+  margin: 10px;
+  background-color: blue;
   border-bottom: 4px double black;
 }
 
-.post-index-image {
-  padding: 30px;
+.post-content {
+  width: 90%;
+  margin: 15px;
+  background-color: white;
+}
+
+.learner-image-left {
+  padding: 25px 150px 25px 0;
 }
 
 .nickname {
+}
+
+.post-title-center {
+  text-align: center;
+  font-size: 20px;
 }
 
 .blank-space {
   height: 10px;
 }
 
-.post-text {
-  margin-top: 20px;
+.post-body {
+  margin-left: 10px;
+}
+
+.post-index-image {
+  padding-top: 20px;
+}
+
+.post-footer {
+  padding-top: 25px;
 }
 
 .comment-icon {
   margin: 0 20px 0 10px;
 }
+
+.good-icon {
+}
+
 
 .red {
   color: red;
@@ -107,6 +134,34 @@
   font-size: 15px;
 }
 
+.links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.edit-button {
+  width: 100px;
+  margin-right: 50px;
+}
+
+.destroy-button {
+  width: 100px;
+}
+
 .btn {
   margin-top: 15px
+}
+
+// 投稿編集画面
+
+.edit-form {
+  margin-top: 150px;
+}
+
+.edit-box {
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 0 8px white;
+  background-color: rgba(0, 0, 0, 0.5);
 }

@@ -10,4 +10,14 @@ class RelationshipsController < ApplicationController
   	redirect_to request.referer
   end
 
+  def following
+  	@learner = Learner.find(params[:learner_id])
+  	@followings = @learner.following_learner
+  end
+
+  def follower
+  	@learner = Learner.find(params[:learner_id])
+  	@followers = @learner.follower_learner
+  end
+
 end

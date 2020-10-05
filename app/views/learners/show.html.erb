@@ -64,24 +64,27 @@
 
         <div class="row link">
 
-            <!-- 学習者編集ボタン -->
+            <!-- 学習者編集/フォローボタン -->
             <div class="col-xs-4">
               <% if @learner.id == current_learner.id %>
                 <%= link_to 'Edit', edit_learner_path(@learner), class: "btn btn-block btn-success" %>
-              <% end %>
-            </div>
-            <div class=col-xs-4></div>
-            <!-- // -->
-
-            <!-- フォローボタン -->
-            <div class="col-xs-4">
-              <% unless @learner == current_learner %>
+              <% else %>
                 <% if current_learner.following?(@learner) %>
-                  <%= link_to 'unfollow', unfollow_path(@learner), method: :post, class: "btn btn-block btn-primary" %>
+                  <%= link_to 'unfollow', unfollow_path(@learner), method: :post, class: "btn btn-block btn-info" %>
                 <% else %>
                   <%= link_to 'follow', follow_path(@learner), method: :post, class: "btn btn-block btn-danger" %>
                 <% end %>
               <% end %>
+            </div>
+
+            <div class=col-xs-4>
+              <%= link_to 'following', learner_following_path(@learner), class: "btn btn-block btn-primary" %>
+            </div>
+            <!-- // -->
+
+            <!-- フォローボタン -->
+            <div class="col-xs-4">
+              <%= link_to 'follower', learner_follower_path(@learner), class: "btn btn-block btn-warning" %>
             </div>
             <!-- // -->
 

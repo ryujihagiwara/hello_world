@@ -1,0 +1,31 @@
+<table class="table table-hover learners-index">
+        <thead>
+          <tr>
+            <th></th>
+            <th>nickname</th>
+            <th>country</th>
+            <th>learning</th>
+            <th>native</th>
+            <th>followers</th>
+            <th>posts</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% followings.each do |following| %>
+          <tr>
+            <td><%= attachment_image_tag following, :profile_image, :fill, 80, 80, fallback: "no_image.jpg", size: '80x80', class: "img-circle pull-left profile-thumb" %></td>
+            <td>
+              <%= link_to learner_path(following) do %>
+                <%= following.nickname %>
+              <% end %>
+            </td>
+            <td><%= following.country %></td>
+            <td><%= following.learning %></td>
+            <td><%= following.native %></td>
+            <td><%= following.followed.count %></td>
+            <td><%= following.posts.count %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>

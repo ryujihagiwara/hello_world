@@ -34,6 +34,21 @@
             </div>
           </div>
           <br>
+
+          <!-- ジャンル選択フォーム -->
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="edit-post-genre">
+                <%= f.radio_button :genre, :true, checked: true %>
+                <%= f.label :genre, "question" %>
+                <%= f.radio_button :genre, :false %>
+                <%= f.label :genre, "tweet" %>
+              </div>
+            </div>
+          </div>
+          <!-- // -->
+
+
           <!-- タイトル入力フォーム -->
           <div class="row">
             <div class="col-xs-6 col-xs-offset-3">

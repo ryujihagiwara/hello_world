@@ -1,22 +1,29 @@
 <div class="container">
 
-    <div class="row post-index">
+  <div class="row post-index">
 
-      <h2 class="index-main-title">Questions/Tweets</h2>
+      <h2 class="index-main-title"><span class="question-color">Questions</span>/<span class="tweet-color">Tweets</span></h2>
 
       <!-- post index -->
       <div class="col-xs-12 post-index-right">
         <% @posts.each do |post| %>
-        <div class="post-content-box <%= post.id %>">
+          <% if post.genre == true %>
+            <div class="post-content-box <%= post.id %>", style="background-color: orange;">
+          <% else %>
+            <div class="post-content-box <%= post.id %>", style="background-color: blue;">
+          <% end %>
 
-          <%= render 'post', post: post %>
+              <%= render 'post', post: post %>
 
-        </div>
+            </div>
 
         <% end %>
 
-    </div>
-    <!-- /.row -->
+      </div>
+      <!-- // -->
 
   </div>
-  <!-- /.container -->
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->

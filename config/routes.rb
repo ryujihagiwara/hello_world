@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   resource :favorites, only: [:create, :destroy]
   end
 
+  get '/questions' => 'posts#question', as: "question"
+  get '/tweets' =>'posts#tweet', as: "tweet"
+
   post '/follow/:id' => 'relationships#follow', as: 'follow'
   post '/unfollow/:id' => 'relationships#unfollow', as: 'unfollow'
 

@@ -1,5 +1,11 @@
 <div class="post-content">
 
+  <% if post.genre == true %>
+    <strong class="question-icon"><i class="far fa-question-circle"></i></strong>
+  <% else %>
+    <strong class="tweet-icon"><i class="far fa-smile-beam"></i></strong>
+  <% end %>
+
   <!-- learner image/nickname -->
     <div class="learner-image-left">
       <%= attachment_image_tag post.learner, :profile_image, :fill, 60,60, fallback: "no_image.jpg", size: '80x80', class: "img-circle" %>

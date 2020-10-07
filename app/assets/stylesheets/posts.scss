@@ -47,6 +47,10 @@
   font-size: 35px;
 }
 
+.text-decoration {
+  text-decoration: none;
+}
+
 .tweet-color {
   color: blue;
   font-size: 35px;
@@ -70,8 +74,20 @@
   background-color: white;
 }
 
+.question-icon {
+  position: relative;
+  left: 90%;
+  font-size: 20px;
+}
+
+.tweet-icon {
+  position: relative;
+  left: 90%;
+  font-size: 20px;
+}
+
 .learner-image-left {
-  padding: 25px 150px 25px 5px;
+  padding: 5px 150px 25px 5px;
 }
 
 .nickname {
@@ -108,6 +124,10 @@
 
 .red {
   color: red;
+}
+
+.paginate {
+  color: white;
 }
 
 // 投稿詳細画面

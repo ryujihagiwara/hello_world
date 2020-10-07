@@ -1,0 +1,12 @@
+<% posts.each do |post| %>
+  <% if post.genre == true %>
+    <div class="post-content-box <%= post.id %>", style="background-color: orange;">
+  <% else %>
+    <div class="post-content-box <%= post.id %>", style="background-color: blue;">
+  <% end %>
+
+      <%= render 'post', post: post %>
+
+    </div>
+
+<% end %>

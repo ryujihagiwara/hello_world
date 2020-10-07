@@ -2,23 +2,19 @@
 
   <div class="row post-index">
 
-      <h2 class="index-main-title"><span class="question-color">Questions</span>/<span class="tweet-color">Tweets</span></h2>
+      <h2 class="index-main-title"><span class="question-color"><%= link_to 'Questions', question_path, class: "text-decoration", remote: true %></span>/<span class="tweet-color"><%= link_to 'Tweets', tweet_path, remote: true %></span></h2>
 
       <!-- post index -->
       <div class="col-xs-12 post-index-right">
-        <% @posts.each do |post| %>
-          <% if post.genre == true %>
-            <div class="post-content-box <%= post.id %>", style="background-color: orange;">
-          <% else %>
-            <div class="post-content-box <%= post.id %>", style="background-color: blue;">
-          <% end %>
 
-              <%= render 'post', post: post %>
+        <%= render 'question', posts: @posts %>
 
-            </div>
+      </div>
+      <!-- // -->
 
-        <% end %>
-
+      <!-- pagination -->
+      <div class="paginate">
+        <%= paginate @posts %>
       </div>
       <!-- // -->
 

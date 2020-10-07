@@ -11,7 +11,7 @@
     <td>
     </td>
     <td>
-      <%= link_to post_comment_path(comment.post, comment), method: :delete, remote: true, class: "btn" do %>
+      <%= link_to post_comment_path(comment.post, comment), method: :delete, remote: true, data: {confirm: "Are you sure？"}, class: "btn" do %>
         <i class="fas fa-trash-alt"></i>
       <% end %>
     </td>

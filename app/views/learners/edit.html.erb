@@ -7,9 +7,20 @@
         <h2 class="learner-edit-title">edit profile</h2>
 
       <%= form_for(@learner) do |f| %>
+
+      <!-- エラーメッセージ -->
+          <% if @learner.errors.any? %>
+            <div class="error_explanation">
+              <h3><%= @learner.errors.count %>error prohibited this obj from being saved:</h3>
+              <ul>
+                <% @learner.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
       <div class="row">
-
-
 
         <div class="col-xs-6 edit-left">
 

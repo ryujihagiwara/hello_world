@@ -2,7 +2,11 @@
 
   <div class="row post-index">
 
-      <h2 class="index-main-title"><span class="question-color"><%= link_to 'Questions', question_path, class: "text-decoration", remote: true %></span>/<span class="tweet-color"><%= link_to 'Tweets', tweet_path, remote: true %></span></h2>
+    <% if flash[:notice] %>
+      <p class="post-success"><%= flash[:notice] %></p>
+    <% end %>
+
+      <h2 class="index-main-title"><span class="question-color"><%= link_to 'Questions', question_path, class: "text-decoration-1", remote: true %></span>/<span class="tweet-color"><%= link_to 'Tweets', tweet_path, class: "text-decoration-2", remote: true %></span></h2>
 
       <!-- post index -->
       <div class="col-xs-12 post-index-right">

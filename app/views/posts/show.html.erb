@@ -1,5 +1,12 @@
+
+
 <div class="post-show">
   <div class="container-fluid post-show-content">
+
+  <% if flash[:notice] %>
+    <p clsss="post-update-success"><%= flash[:notice] %></p>
+  <% end %>
+
 
     <!-- learner info -->
     <div class="wrapper">

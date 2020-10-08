@@ -9,16 +9,18 @@
       <%= form_for(@learner) do |f| %>
 
       <!-- エラーメッセージ -->
+        <div class="col-xs-12 error-box">
           <% if @learner.errors.any? %>
             <div class="error_explanation">
               <h3><%= @learner.errors.count %>error prohibited this obj from being saved:</h3>
-              <ul>
+              <ul class="error-color">
                 <% @learner.errors.full_messages.each do |message| %>
                   <li><%= message %></li>
                 <% end %>
               </ul>
             </div>
           <% end %>
+        </div>
 
       <div class="row">
 

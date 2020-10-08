@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_action :authenticate_learner!
+
   def new
     @post = Post.new
   end
@@ -8,7 +10,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.learner_id = current_learner.id
     if @post.save
-       redirect_to posts_path
+       redirect_to posts_path, notice: "Posting was successful!"
     else
        render 'new'
     end
@@ -34,12 +36,16 @@ class PostsController < ApplicationController
 
   def edit
   	@post = Post.find(params[:id])
+    if @post.learner == current_learner
+    else
+      redirect_to post_path(@post)
+    end
   end
 
   def update
   	@post = Post.find(params[:id])
   	if @post.update(post_params)
-  	   redirect_to post_path
+  	   redirect_to post_path, notice: "Post was updated!"
   	else
   	   render 'edit'
   	end

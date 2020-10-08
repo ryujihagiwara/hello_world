@@ -11,7 +11,9 @@
       </button>
 
     <div class="header-logo">
-      <%= link_to 'Hello World', root_path, class: "logo" %>
+      <%= link_to root_path do %>
+        <h2 class="logo">HELLO WORLD</h2>
+      <% end %>
     </div>
 
     </div>

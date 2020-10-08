@@ -12,17 +12,20 @@
           </div>
 
           <%= form_for(@post) do |f| %>
+
           <!-- エラーメッセージ -->
+        <div class="col-xs-12 error-box">
           <% if @post.errors.any? %>
             <div class="error_explanation">
               <h3><%= @post.errors.count %>error prohibited this obj from being saved:</h3>
-		          <ul>
+		          <ul class="error-color">
 		            <% @post.errors.full_messages.each do |message| %>
 			            <li><%= message %></li>
 			          <% end %>
 		          </ul>
 	          </div>
 	        <% end %>
+        </div>
 
 
           <!-- 画像登録フォーム -->

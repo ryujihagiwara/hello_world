@@ -1,7 +1,13 @@
 <section class="learner-info center-block">
   <div class="container-fluid">
     <div class="row">
+
+
       <div class="col-xs-12 learner-block">
+
+        <% if flash[:notice] %>
+          <p class="learner-update-success"><%= flash[:notice] %></p>
+        <% end %>
 
         <!-- learner image/nickname -->
         <div class="learner-image">

@@ -40,11 +40,14 @@ header {
 }
 
 .header-logo {
-  padding: 30px 0 0 50px;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  padding: 20px 0 0 50px;
 }
 
 .logo {
-  font-size: 20px;
+  font-family: "arial black", Chalkduster, "Bradley Hand", Courier, "Segoe Print", sans-serif;
 }
 
 .navbar-right {
@@ -135,6 +138,16 @@ footer {
 .footer-text {
   text-align: center;
   color: white;
+}
+
+
+.error-box {
+  text-align: center;
+}
+
+.error-color {
+  list-style: none;
+  color: red;
 }
 
 

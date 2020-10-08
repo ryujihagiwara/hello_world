@@ -47,13 +47,27 @@
   font-size: 35px;
 }
 
-.text-decoration {
-  text-decoration: none;
+.text-decoration-1 {
+  color: orange;
+}
+
+.text-decoration-1:hover  {
+  text-decoration:underline;
+  color: orange;
 }
 
 .tweet-color {
   color: blue;
   font-size: 35px;
+}
+
+.text-decoration-2 {
+  color: blue;
+}
+
+.text-decoration-2:hover  {
+  text-decoration:underline;
+  color: blue;
 }
 
 .post-index-right {
@@ -130,6 +144,11 @@
   text-align: center;
 }
 
+.post-success {
+  font-size: 15px;
+  color: white;
+}
+
 // 投稿詳細画面
 
 .post-show {
@@ -192,6 +211,11 @@
 
 .btn {
   margin-top: 15px
+}
+
+.post-update-success {
+  font-size: 20px;
+  color: white;
 }
 
 // 投稿編集画面

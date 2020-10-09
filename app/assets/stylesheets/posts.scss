@@ -5,14 +5,12 @@
 // 新規投稿画面
 
 .post-new-form {
-  margin-top: 150px;
+  margin-top: 70px;
 }
 
 .post-form {
   margin: 0 auto;
-  border-radius: 20px;
-  box-shadow: 0 0 8px white;
-  background-color: white;
+
 }
 
 .img-responsive:hover {
@@ -155,9 +153,6 @@
   width: 80%;
   margin: 0 auto;
   padding-bottom: 15px;
-  border-radius: 20px;
-  box-shadow: 0 0 8px white;
-  background-color: white;
 }
 
 .post-show-content {
@@ -218,6 +213,10 @@
   color: white;
 }
 
+.comment-head {
+  color: white;
+}
+
 // 投稿編集画面
 
 .edit-form {
@@ -226,9 +225,6 @@
 
 .edit-box {
   margin: 0 auto;
-  border-radius: 20px;
-  box-shadow: 0 0 8px white;
-  background-color: white;
 }
 
 .edit-post-genre {

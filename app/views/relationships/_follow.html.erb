@@ -1,4 +1,4 @@
-<table class="table table-hover learners-index">
+<table class="table learners-index">
         <thead>
           <tr>
             <th></th>
@@ -16,7 +16,7 @@
           <tr>
             <td><%= attachment_image_tag following, :profile_image, :fill, 80, 80, fallback: "no_image.jpg", size: '80x80', class: "img-circle pull-left profile-thumb" %></td>
             <td>
-              <%= link_to learner_path(following) do %>
+              <%= link_to learner_path(following), class: "relationship-nickname" do %>
                 <%= following.nickname %>
               <% end %>
             </td>

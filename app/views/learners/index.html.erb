@@ -4,7 +4,7 @@
 
       <h2 class="index-learners-title">Learners</h2>
 
-      <table class="table table-hover learners-index">
+      <table class="table learners-index">
         <thead>
           <tr>
             <th></th>
@@ -21,7 +21,7 @@
           <tr>
             <td><%= attachment_image_tag learner, :profile_image, :fill, 80, 80, fallback: "no_image.jpg", size: '80x80', class: "img-circle pull-left profile-thumb" %></td>
             <td>
-              <%= link_to learner_path(learner) do %>
+              <%= link_to learner_path(learner), class: "nickname-decoration" do %>
                 <%= learner.nickname %>
               <% end %>
             </td>

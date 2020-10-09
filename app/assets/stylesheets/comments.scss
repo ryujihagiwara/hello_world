@@ -1,3 +1,22 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// コメント一覧
+
+.comment-name-decoration {
+  color: orange;
+}
+
+.comment-name-decoration:hover {
+  text-decoration: underline;
+  color: orange;
+}
+
+.comment-decoration {
+  color: white;
+}
+
+.fa-trash-alt {
+  color: red;
+}

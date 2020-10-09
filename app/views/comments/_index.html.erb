@@ -2,11 +2,11 @@
   <tr>
     <td><%= attachment_image_tag comment.learner, :profile_image, :fill, 80, 80, fallback: "no_image.jpg", size: '80x80', class: "img-circle pull-left profile-thumb" %></td>
     <td>
-      <%= link_to learner_path(comment.learner.id) do %>
+      <%= link_to learner_path(comment.learner.id), class: "comment-name-decoration" do %>
         <%= comment.learner.nickname %>
       <% end %>
     </td>
-    <td><%= comment.comment %></td>
+    <td class="comment-decoration"><%= comment.comment %></td>
   <% if comment.learner == current_learner %>
     <td>
     </td>

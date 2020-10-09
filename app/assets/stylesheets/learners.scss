@@ -136,15 +136,27 @@ span {
 
 .learners-index {
   margin-top: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px white;
-  background-color: white;
 }
 
 .learners-index th {
   font-size: 20px;
 }
 
+.learners-index th {
+  font-size: 20px;
+  color: white;
+}
+
 .learners-index td {
-  font-size: 15px;
+  font-size: 18px;
+  color: white;
  }
+
+ .nickname-decoration {
+  color: orange;
+ }
+
+.nickname-decoration:hover {
+  text-decoration:underline;
+  color: orange;
+}

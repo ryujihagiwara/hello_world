@@ -1,0 +1,15 @@
+<div class="notifications-box">
+<h3 class="text-center notification-index-title">Notifications</h3>
+  <%= link_to destroy_all_path, method: :delete, class: "trash" do %>
+    <i class="fas fa-trash" style="color: red;"></i>
+    <h7 style="color: white;">delete_all</h7>
+  <% end %>
+  <hr>
+  <% if @notifications.exists? %>
+    <div class="learners-notification-index">
+      <%= render @notifications %>
+    </div>
+  <% else %>
+    <P class="no-notification">No notification</P>
+  <% end %>
+</div>

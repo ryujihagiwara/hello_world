@@ -21,6 +21,12 @@
     <nav>
       <ul id="navbar" class="nav navbar-nav navbar-right navbar-collapse collapse">
         <% if learner_signed_in? %>
+          <li>
+            <% if unchecked_notifications.any? %>
+              <i class="fa fa-circle" style="color: gold;"></i>
+            <% end %>
+            <%= link_to 'Notice', notifications_path, class: "header-list-item"%>
+          </li>
   	      <li><%= link_to 'My Page', learner_path(current_learner), class: "header-list-item" %></li>
   	      <li><%= link_to 'Post New', new_post_path, class: "header-list-item" %></li>
   	      <li><%= link_to 'Moments', posts_path, class: "header-list-item" %></li>

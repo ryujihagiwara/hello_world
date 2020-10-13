@@ -1,0 +1,40 @@
+// Place all the styles related to the notifications controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 通知一覧
+
+.notifications-box {
+  width: 70%;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+
+.notification-index-title {
+  color: white;
+}
+
+.trash {
+  padding-left: 30px;
+}
+
+.learner-view {
+  margin-top: 10px;
+}
+
+.notification-image {
+  width: 80px;
+  height: 80px;
+  margin-left: 30px;
+}
+
+.notification-type {
+  padding-left: 100px;
+  color: white;
+}
+
+.no-notification {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}

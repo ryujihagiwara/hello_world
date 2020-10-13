@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   resource :favorites, only: [:create, :destroy]
   end
 
+  resources :notifications, only: [:index]
+  delete '/notifications/destroy_all' => 'notifications#destroy_all', as: 'destroy_all'
+
+
   get '/questions' => 'posts#question', as: "question"
   get '/tweets' =>'posts#tweet', as: "tweet"
 

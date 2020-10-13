@@ -1,7 +1,9 @@
 class RelationshipsController < ApplicationController
 
   def follow
+    @learner = Learner.find(params[:id])
     current_learner.follow(params[:id])
+    @learner.create_notification_follow!(current_learner)
     redirect_to request.referer
   end
 

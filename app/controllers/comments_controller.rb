@@ -6,7 +6,9 @@ class CommentsController < ApplicationController
     @comment.learner_id = current_learner.id
     @comment.post_id = @post.id
     @comment.save
+    @post.create_notification_comment!(current_learner, @comment.id)
     @comments = @post.comments
+
   end
 
   def destroy

@@ -15,6 +15,11 @@ class Learner < ApplicationRecord
   has_many :follower_learner, through: :followed, source: :follower
   # //
 
+  # 通知機能
+  has_many :active_notifications, class_name: "Notification", foreign_key: "visiter_id", dependent: :destroy
+  has_many :passive_notifications, class_name: "Notification", foreign_key: "visited_id", dependent: :destroy
+  # //
+
   attachment :profile_image
 
   validates :nickname, presence: true
@@ -37,4 +42,15 @@ class Learner < ApplicationRecord
     following_learner.include?(learner)
   end
 
+
+  def create_notification_follow!(current_learner)
+    temp = Notification.where(["visiter_id = ? and visited_id = ? and action = ?", current_learner.id, id, "follow"])
+    if temp.blank?
+      notification = current_learner.active_notifications.new(
+        visited_id: id,
+        action: "follow"
+      )
+      notification.save if notification.valid?
+    end
+  end
 end

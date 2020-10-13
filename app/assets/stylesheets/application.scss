@@ -61,6 +61,12 @@ header {
   color: white;
 }
 
+.fa-circle {
+  position: absolute;
+  padding-left: 0.5rem;
+  padding-top: 1rem;
+}
+
 // main部分
 
 main {
@@ -94,7 +100,7 @@ main {
 
 .sign-in {
   width: 30%;
-  padding-top: 80px;
+  padding-top: 200px;
   text-align: center;
 }
 

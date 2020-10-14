@@ -19,6 +19,7 @@
 
 // 学習者編集 画像プレビュー
 
+$(document).on('turbolinks:load', function() {
 $(function() {
   function readURL(input) {
     if(input.files && input.files[0]){
@@ -34,9 +35,11 @@ $(function() {
   	readURL(this);
   });
 });
+});
 
 // 新規投稿 画像プレビュー
 
+$(document).on('turbolinks:load', function() {
 $(function(){
   function readURL(input) {
     if(input.files && input.files[0]){
@@ -52,7 +55,7 @@ $(function(){
     readURL(this);
   });
 });
-
+});
 
 
 
